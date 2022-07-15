@@ -1,0 +1,47 @@
+.landing div.content-box{
+    text-align: center;
+}
+.landing div.content-box h2{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+.landing div.content-box button{
+    margin-top: 20px;
+}
+.hero-image{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 600px) {
+    .landing div{
+        width: 50%;
+    }
+    .landing div.content-box{
+        text-align: left;
+        margin-right: auto;
+        padding-top: 10%;
+        padding-left: 1%;
+    }
+    .landing div.content-box h2{
+        font-size: 2em;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    
+    }
+    .landing div.content-box p{
+        font-size: 1.2em;
+    }
+    
+    .landing div.content-box button{
+        margin-top: 20px;
+    }
+    .hero-image{
+        width: 100%;
+        height: auto;
+    }
+  }
+  

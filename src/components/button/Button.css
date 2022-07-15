@@ -7,8 +7,22 @@
     border-radius: 5px;
 }
 
+
+.secondary-btn{
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #096bff;
+    color: #096bff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 @media screen and (min-width: 600px) {
     .primary-btn{
+        width: 40%;
+        padding: 15px;
+    }
+    .secondary-btn{
         width: 40%;
         padding: 15px;
     }

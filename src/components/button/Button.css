@@ -1,0 +1,15 @@
+.primary-btn{
+    width: 100%;
+    background-color: #096bff;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 600px) {
+    .primary-btn{
+        width: 40%;
+        padding: 15px;
+    }
+  }

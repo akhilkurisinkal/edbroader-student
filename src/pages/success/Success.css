@@ -1,0 +1,32 @@
+.success{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.success .hero-div{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.success .hero-div img{
+    width: 70%;
+    height: auto;
+}
+
+@media screen and (min-width: 600px) {
+    .success{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+    }
+
+    .success .hero-div img{
+        width: 30%;
+        height: auto;
+    }
+
+}

@@ -1,0 +1,11 @@
+@media screen and (min-width: 600px){
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: center;
+    }
+   
+}

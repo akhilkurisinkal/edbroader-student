@@ -1,0 +1,73 @@
+.textbox{
+    width: 100%;
+    height: 44px;
+    background-color: yellow;
+    position: relative;
+    margin: 20px 0;
+    
+}
+.textbox input[type="text"]{
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+    border: none;
+    border-bottom: 1px solid #A7ABBF;
+    padding:0;
+    margin: 0;
+    padding-left: 40px;
+    font-size: 1.2em;
+    
+}
+
+.textbox input[type="password"]{
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+    border: none;
+    border-bottom: 1px solid #A7ABBF;
+    padding:0;
+    margin: 0;
+    padding-left: 40px;
+    font-size: 1.2em;
+}
+.textbox input[type="email"]{
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+    border: none;
+    border-bottom: 1px solid #A7ABBF;
+    padding:0;
+    margin: 0;
+    padding-left: 40px;
+    font-size: 1.2em;
+}
+
+.textbox span{
+    color: red;
+    font-size: 0.8em;
+}
+
+.textbox input[type="text"]:focus{
+    outline: none;
+    border-bottom: 1px solid #000000;
+}
+.textbox input[type="email"]:focus{
+    outline: none;
+    border-bottom: 1px solid #000000;
+}
+.textbox input[type="password"]:focus{
+    outline: none;
+    border-bottom: 1px solid #000000;
+}
+
+
+.textbox img.inputIcon{
+    width: 26px;
+    height: auto;
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+}
+
+
+

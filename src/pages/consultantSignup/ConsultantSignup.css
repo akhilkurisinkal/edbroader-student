@@ -1,0 +1,87 @@
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    background-color: #096bff;
+}
+.signup-sub{
+    width: 100%;
+    padding-left: 1%;
+}
+.signup .hero-div{
+    background: hsla(280, 84%, 41%, 1);
+
+    background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8711C1", endColorstr="#2472FC", GradientType=1 );
+    padding: 13% 11%;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.signup .hero-div h2{
+    font-size: 1em;
+}
+.signup .hero-div img{
+    width: 70%;
+    height: auto;
+}
+.signup .content-box{
+    flex:1;
+    padding: 5% 11%;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+
+@media screen and (min-width: 600px) {
+    .signup{
+        padding: 0 0;
+        background-color: #DCDEE6;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+   
+
+    .signup button.primary-btn{
+        width: 100%;
+    }
+
+    .signup button.secondary-btn{
+        width: 100%;
+    }
+
+    .signup .hero-div{
+        width: 50%;
+        padding: 8%;
+        padding-left: 11%;
+        display: flex;
+        background-color: #096bff;
+        color: #ffffff;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .signup .hero-div img{
+        width: 70%;
+        height: auto;
+    }
+
+    .signup .content-box{
+        flex:1;
+        width: 50%;
+        padding: 5%;
+        border-radius: 0;
+    }
+
+    .signup .hero-div h2{
+        font-size: 1.8em;
+    }
+
+}

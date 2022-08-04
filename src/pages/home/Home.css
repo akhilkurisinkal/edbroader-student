@@ -1,0 +1,41 @@
+@media screen and (min-width: 600px){
+    .home{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: center;
+    }
+    .home #search-bar{
+        width: 93%;
+        background-color: green;
+    }
+    .home #search-bar #search-bar-container{
+        width: 100%;
+        display: flex;
+    }
+    .home #search-bar #search-bar-container input[type="text"]{
+        width: 90%;
+        padding: 10px;
+    }
+    .home #search-bar #search-bar-container button.search-btn{
+        width: 10%;
+        padding: 10px;
+        border: none;
+        background: hsla(280, 84%, 41%, 1);
+
+background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8711C1", endColorstr="#2472FC", GradientType=1 );
+        color: #F5F5F5;
+    }
+    .home h2{
+        width: 93%;
+        justify-self: left;
+        margin: 20px 0px;
+        padding: 0;
+    }
+}

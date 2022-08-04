@@ -1,0 +1,91 @@
+
+.verify{
+    display: flex;
+    flex-direction: column;
+    background-color: #096bff;
+
+}
+.verify-sub{
+    width: 100%;
+    padding-left: 1%;
+}
+.verify .hero-div{
+    background: hsla(280, 84%, 41%, 1);
+
+    background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8711C1", endColorstr="#2472FC", GradientType=1 );
+    padding: 13% 11%;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.verify .hero-div h2{
+    font-size: 1em;
+}
+.verify .hero-div img{
+    width: 70%;
+    height: auto;
+}
+.verify .content-box{
+    flex:1;
+    padding: 5% 11%;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+
+@media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) {
+    .verify{
+        padding: 0 0;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+   
+
+    .verify button.primary-btn{
+        width: 100%;
+    }
+
+    .verify button.secondary-btn{
+        width: 100%;
+    }
+
+    .verify .hero-div{
+        width: 50%;
+        padding: 8%;
+        padding-left: 11%;
+        display: flex;
+        background-color: #096bff;
+        color: #ffffff;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .verify .hero-div img{
+        width: 70%;
+        height: auto;
+    }
+
+    .verify .content-box{
+        flex:1;
+        width: 50%;
+        padding: 5%;
+        border-radius: 0;
+    }
+
+    .verify .hero-div h2{
+        font-size: 1.8em;
+    }
+
+}
+    
+
+}

@@ -4,6 +4,8 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         overflow: auto;
 
         padding-top: 5%;

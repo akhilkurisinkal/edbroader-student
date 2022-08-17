@@ -25,7 +25,7 @@ const Landing=()=>{
                 <h2>Be ready to go global.</h2>
                 <p>Explore the best countries, schools and academic programs with edbroader.</p>
                 <Button id="getStarted" className="primary-btn" label="Get Started" handleClick={getStarted} />
-                <p>Already using edbroader? <a href="/login">Login here</a></p>
+                <p>Already using edbroader? <link to="/login">Login here</link></p>
             </div>
         </div>
     )

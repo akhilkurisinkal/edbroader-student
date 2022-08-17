@@ -82,7 +82,7 @@ const Chat=()=>{
 
                             </div>
                             <div className="recta">
-                                <h6>Akhil K Thomas</h6>
+                                <h6>{chat.user}</h6>
                                     {chat.message}
                             </div>
                         </div>

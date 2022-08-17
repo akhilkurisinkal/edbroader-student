@@ -38,6 +38,7 @@ const Login=()=>{
                 setErrors({...errors,credentialError:"Invalid credentials"});
             }else{
                 localStorage.setItem("accessToken",data.accessToken);
+                localStorage.setItem("alias",data.alias);
                 isLogged.setIsLogged(true);
                 console.log(isLogged.isLogged);
                 if(data.onboarded!=="yes"){

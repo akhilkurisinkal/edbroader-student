@@ -27,7 +27,7 @@ const Search=(props)=>{
                             {program.subLevel}
                         </div>
                         <div>
-                           24 months
+                           {program.length}
                         </div>
                         <div className="right">
                             {program.fees}
@@ -49,11 +49,9 @@ const Search=(props)=>{
                         <div>
                             {school.country}
                         </div>
-                        <div>
-                           24 months
-                        </div>
+            
                         <div className="right">
-                            {school.worldRank}
+                           # {school.worldRank} &nbsp; in the World
                         </div>
                     </button>
                 ))

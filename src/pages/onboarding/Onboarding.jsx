@@ -67,7 +67,7 @@ const Onboarding=()=>{
     }
 
     const getEduSubLevels=()=>{
-        const query=url+'/sublevels';
+        const query=url+'/sublevels/';
         // const url="http://localhost:3000/subLevels/";
         const queryString=query+userData.eduLevel;
         console.log("fetching education sub levels");
@@ -91,8 +91,8 @@ const Onboarding=()=>{
     
 
     const getEduSubFields=()=>{
-        const url=url+"/subFields/";
-        const queryString=url+userData.eduField;
+        const query=url+"/subFields/";
+        const queryString=query+userData.eduField;
         console.log("fetching education sub fields");
         fetch(queryString)
         .then(res => res.json())
@@ -102,8 +102,8 @@ const Onboarding=()=>{
     }
 
     const getInterestedCareers=()=>{
-        const url=url+"/careers/";
-        const queryString=url+userData.eduSubField;
+        const query=url+"/careers/";
+        const queryString=query+userData.eduSubField;
         console.log("fetching careers...")
         console.log(queryString);
         fetch(queryString)

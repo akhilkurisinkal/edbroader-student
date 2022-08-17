@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/edbroader-student/static/css/main.7ec15ac0.css",
+    "main.css": "/edbroader-student/static/css/main.99b634bc.css",
     "main.js": "/edbroader-student/static/js/main.fd92dd0f.js",
     "static/js/787.33f7a2c3.chunk.js": "/edbroader-student/static/js/787.33f7a2c3.chunk.js",
     "static/media/boyStudying.gif": "/edbroader-student/static/media/boyStudying.60818cc0763a53bf31d0.gif",
@@ -17,12 +17,12 @@
     "index.html": "/edbroader-student/index.html",
     "static/media/lock.svg": "/edbroader-student/static/media/lock.67070da170c8d834d7109b214a605ba5.svg",
     "static/media/email.svg": "/edbroader-student/static/media/email.5a387e74dbef285fe81a3cd40ea170b5.svg",
-    "main.7ec15ac0.css.map": "/edbroader-student/static/css/main.7ec15ac0.css.map",
+    "main.99b634bc.css.map": "/edbroader-student/static/css/main.99b634bc.css.map",
     "main.fd92dd0f.js.map": "/edbroader-student/static/js/main.fd92dd0f.js.map",
     "787.33f7a2c3.chunk.js.map": "/edbroader-student/static/js/787.33f7a2c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ec15ac0.css",
+    "static/css/main.99b634bc.css",
     "static/js/main.fd92dd0f.js"
   ]
 }

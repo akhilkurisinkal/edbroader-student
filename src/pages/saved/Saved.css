@@ -9,6 +9,11 @@
         padding-top: 5%;
 
 }
+
+.saved h2{
+    text-align: center;
+    margin: auto;
+}
 .saved-child{
     width: 100%;
     height: auto;

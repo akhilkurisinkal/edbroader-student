@@ -15,8 +15,7 @@ const Support=()=>{
         e.preventDefault();
         console.log("search button clicked");
         const query=url+"/consultants/";
-        const url=query;
-        const searchURL=url+postalCode;
+        const searchURL=query+postalCode;
         fetch(searchURL)
         .then(res => res.json())
         .then(data=>{

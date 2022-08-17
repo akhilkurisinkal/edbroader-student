@@ -4,7 +4,7 @@ import boyStudying from "../../assets/boyStudying.gif";
 import boyStudyingGrey from "../../assets/boyStudyingGrey.gif";
 import Button from "../../components/button/Button";
 import { AppContext } from "../../AppContext";
-
+import { Link } from "react-router-dom";
 
 import "./Landing.css";
 const Landing=()=>{
@@ -25,7 +25,7 @@ const Landing=()=>{
                 <h2>Be ready to go global.</h2>
                 <p>Explore the best countries, schools and academic programs with edbroader.</p>
                 <Button id="getStarted" className="primary-btn" label="Get Started" handleClick={getStarted} />
-                <p>Already using edbroader? <link to="/login">Login here</link></p>
+                <p>Already using edbroader? <Link to="/login">Login here</Link></p>
             </div>
         </div>
     )

@@ -11,6 +11,8 @@ const Home=()=>{
     const page=useContext(AppContext)
     const [searchString,setSearchString]=useState(false);
     const [searchPrograms,setSearchPrograms]=useState([]);
+    const [searchSchools,setSearchSchools]=useState([]);
+    const [searchCountries,setSearchCountries]=useState([]);
     const [suggestedPrograms,setSuggestedPrograms]=useState([]);
     
 
@@ -49,6 +51,8 @@ const Home=()=>{
                 console.log(" no record");
             }else{
                 setSearchPrograms(data.programs);
+                setSearchSchools(data.schools);
+                setSearchCountries(data.countries);
                 console.log(data.programs);
             }
         })
@@ -67,7 +71,7 @@ const Home=()=>{
                 searchString!==false?<h2>Search Result</h2>:<h2>Suggested for you</h2>
             }
             {
-                searchString!==false?<Search programs={searchPrograms}/>:<Suggested programs={suggestedPrograms}/>
+                searchString!==false?<Search programs={searchPrograms} schools={searchSchools} countries={searchCountries} />:<Suggested programs={suggestedPrograms} />
             }
             {
                 searchString===false&&suggestedPrograms.length<=0 && <Loading/>

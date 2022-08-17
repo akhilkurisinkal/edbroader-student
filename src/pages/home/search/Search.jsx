@@ -12,8 +12,9 @@ const Search=(props)=>{
     return(
         <div id="search">
             
-            
+            <h4>Programs</h4>
             {
+                
                 props.programs.map(program=>(
                     <button className="search-child" onClick={event=>{viewProgram(event,program.code)}}>
                         <div className="left">
@@ -30,6 +31,29 @@ const Search=(props)=>{
                         </div>
                         <div className="right">
                             {program.fees}
+                        </div>
+                    </button>
+                ))
+            }
+            <h4>Schools</h4>
+            {
+                
+                props.schools.map(school=>(
+                    <button className="search-child">
+                        <div className="left">
+                            Logo
+                        </div>
+                        <div className="middle">
+                            <h4>{school.name}</h4>
+                        </div>
+                        <div>
+                            {school.country}
+                        </div>
+                        <div>
+                           24 months
+                        </div>
+                        <div className="right">
+                            {school.worldRank}
                         </div>
                     </button>
                 ))

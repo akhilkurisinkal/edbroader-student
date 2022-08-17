@@ -7,6 +7,7 @@ import Button from "../../components/button/Button";
 import loginhero from "../../assets/loginhero.svg";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../AppContext";
+import url from "../../url";
 
 const Login=()=>{
     const page=useContext(AppContext);
@@ -23,7 +24,8 @@ const Login=()=>{
     const navigate=useNavigate();
     const loginUser=(event)=>{
         event.preventDefault();
-        fetch('http://localhost:3000/login',{
+        const query=url+'/login';
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify(loginData)  

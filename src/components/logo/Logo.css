@@ -1,0 +1,23 @@
+.logo{
+    width: 180px;
+    height: auto;
+}
+
+.desk{
+    display: none;
+}
+@media screen and (min-width: 600px) {
+    .logo{
+        width: 200px;
+        height: auto;
+        display: none;
+    }
+
+    .desk{
+        display: inline-block;
+        width: 98%;
+        height: auto;
+        margin-top: 0;
+
+    }
+  }

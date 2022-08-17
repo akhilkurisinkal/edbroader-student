@@ -6,7 +6,7 @@ import "./Home.css";
 import Suggested from "./suggested/Suggested";
 import Loading from "../../components/loading/Loading";
 import Search from "./search/Search";
-
+import url from "../../url";
 const Home=()=>{
     const page=useContext(AppContext)
     const [searchString,setSearchString]=useState(false);
@@ -20,7 +20,8 @@ const Home=()=>{
     },[page])
 
     const getSuggested=()=>{
-        fetch('http://localhost:3000/suggested/',{
+        const query=url+'/suggested';
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken")})  
@@ -40,7 +41,7 @@ const Home=()=>{
     const search=(e)=>{
         e.preventDefault();
         console.log("search button clicked");
-        const url="http://localhost:3000/search/";
+        const url=url+"/search/";
         const searchURL=url+searchString;
         fetch(searchURL)
         .then(res => res.json())
@@ -64,7 +65,7 @@ const Home=()=>{
                 </form>
             </div>
             {
-                searchString!==false?<h2>Search Result</h2>:<h2>Suggested for</h2>
+                searchString!==false?<h2>Search Result</h2>:<h2>Suggested for you</h2>
             }
             {
                 searchString!==false?<Search programs={searchPrograms}/>:<Suggested programs={suggestedPrograms}/>

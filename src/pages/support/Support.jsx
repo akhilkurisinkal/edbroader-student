@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect,useContext } from "react";
 import "./Support.css";
 import { AppContext } from "../../AppContext";
+import url from "../../url";
 const Support=()=>{
     const page=useContext(AppContext)
     const [postalCode,setPostalCode]=useState("");
@@ -13,7 +14,8 @@ const Support=()=>{
     const search=(e)=>{
         e.preventDefault();
         console.log("search button clicked");
-        const url="http://localhost:3000/consultants/";
+        const query=url+"/consultants/";
+        const url=query;
         const searchURL=url+postalCode;
         fetch(searchURL)
         .then(res => res.json())
@@ -30,7 +32,8 @@ const Support=()=>{
     }
 
     const connect=(event,param)=>{
-        fetch("http://localhost:3000/consultants/connect",{
+        const query=url+"/consultants/connect";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken"),id:param})

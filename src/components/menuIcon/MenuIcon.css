@@ -1,0 +1,12 @@
+.menuIcon{
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    margin-top: 8px;
+}
+
+@media screen and (min-width: 600px) {
+    .menuIcon{
+        display: none;
+    }
+  }

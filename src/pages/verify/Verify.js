@@ -7,8 +7,7 @@ import Button from "../../components/button/Button";
 import verifyhero from "../../assets/verifyhero.svg";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../AppContext";
-   
-   
+import url from "../../url";
 const Verify=()=>{
     const page=useContext(AppContext);
     const [code, setCode]=useState({
@@ -26,7 +25,8 @@ const Verify=()=>{
 
     const verifyUser=(event)=>{
         event.preventDefault();
-        fetch('http://localhost:3000/verify/',{
+        const query=url+"/verify/";
+        fetch(query,{
             method:"POST",
             body:JSON.stringify(code),
             headers:{

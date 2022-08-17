@@ -60,7 +60,8 @@ const Program=()=>{
                 console.log("already joined");
             }else{
                 console.log("joined group");
-                navigate("/chat");
+                const route="/group/"+param;
+                navigate(route);
             }
         })
     }

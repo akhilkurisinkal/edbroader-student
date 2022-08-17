@@ -1,7 +1,7 @@
 import React, { useEffect, useState,useContext } from "react";
 import "./Saved.css";
 import { AppContext } from "../../AppContext";
-
+import url from "../../url";
 const Saved=()=>{
     const page=useContext(AppContext);
     const [saved,setSaved]=useState([]);
@@ -12,7 +12,8 @@ const Saved=()=>{
         getSaved();
     },[])
     const getSaved=()=>{
-        fetch("http://localhost:3000/save/saved",{
+        const query=url+"/save/saved"
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken")})

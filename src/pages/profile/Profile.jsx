@@ -6,7 +6,7 @@ import { useState,useEffect,useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../AppContext";
 import profileImg from "../../assets/profile.svg";
-
+import url from "../../url";
 
 const Profile=()=>{
     const page=useContext(AppContext)
@@ -54,7 +54,8 @@ const Profile=()=>{
 
     const getNationalities=()=>{
         console.log("fetching nationalities");
-        fetch('http://localhost:3000/countries')
+        const query=url+"/countries";
+        fetch(query)
         .then(res => res.json())
         .then(data=>{
             setNationalities(data.data);
@@ -63,7 +64,8 @@ const Profile=()=>{
 
     const getEduLevels=()=>{
         console.log("fetching education levels");
-        fetch('http://localhost:3000/levels')
+        const query=url+"/levels";
+        fetch(query)
         .then(res => res.json())
         .then(data=>{
             setEduLevels(data.data);
@@ -71,7 +73,8 @@ const Profile=()=>{
     }
 
     const getEduSubLevels=()=>{
-        const url="http://localhost:3000/subLevels/";
+        const query=url+"/subLevels/";
+        const url=query;
         const queryString=url+userData.eduLevel;
         console.log("fetching education sub levels");
         console.log(queryString)
@@ -84,7 +87,8 @@ const Profile=()=>{
 
     const getEduFields=()=>{
         console.log("fetching education fields");
-        fetch('http://localhost:3000/fields')
+        const query=url+"/fields";
+        fetch(query)
         .then(res => res.json())
         .then(data=>{
             setEduFields(data.data);
@@ -93,7 +97,8 @@ const Profile=()=>{
     
 
     const getEduSubFields=()=>{
-        const url="http://localhost:3000/subFields/";
+        const query=url+"/subFields/";
+        const url=query;
         const queryString=url+userData.eduField;
         console.log("fetching education sub fields");
         fetch(queryString)
@@ -104,7 +109,8 @@ const Profile=()=>{
     }
 
     const getInterestedCareers=()=>{
-        const url="http://localhost:3000/careers/";
+        const query=url+"/careers/";
+        const url=query;
         const queryString=url+userData.eduSubField;
         console.log("fetching careers...")
         console.log(queryString);
@@ -116,7 +122,8 @@ const Profile=()=>{
     }
 
     const saveData=()=>{
-        fetch('http://localhost:3000/onboarding/',{
+        const query=url+"/onboarding/";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify(userData)

@@ -8,7 +8,7 @@ import Button from "../../components/button/Button";
 import signuphero from "../../assets/signuphero.svg";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../AppContext";
-
+import url from "../../url";
 const Signup=()=>{
     const page=useContext(AppContext);
     const [userData,setUserData]=useState(
@@ -30,7 +30,8 @@ const Signup=()=>{
     const navigate=useNavigate();
     const signupAction=(event)=>{
         event.preventDefault();
-        fetch('http://localhost:3000/signup/',{
+        const query=url+"/signup";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify(userData)

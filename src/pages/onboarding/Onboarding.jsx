@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Dropdown from "../../components/dropdown/Dropdown";
 import Button from "../../components/button/Button";
 import "./Onboarding.css";
+import url from "../../url";
 import { useNavigate } from "react-router-dom";
 const Onboarding=()=>{
     const [nationalities,setNationalities]=useState([]);
@@ -47,7 +48,8 @@ const Onboarding=()=>{
 
     const getNationalities=()=>{
         console.log("fetching nationalities");
-        fetch('http://localhost:3000/countries')
+        const query=url+'/countries';
+        fetch(query)
         .then(res => res.json())
         .then(data=>{
             setNationalities(data.data);
@@ -56,7 +58,8 @@ const Onboarding=()=>{
 
     const getEduLevels=()=>{
         console.log("fetching education levels");
-        fetch('http://localhost:3000/levels')
+        const query=url+'/levels';
+        fetch(query)
         .then(res => res.json())
         .then(data=>{
             setEduLevels(data.data);
@@ -64,8 +67,9 @@ const Onboarding=()=>{
     }
 
     const getEduSubLevels=()=>{
-        const url="http://localhost:3000/subLevels/";
-        const queryString=url+userData.eduLevel;
+        const query=url+'/sublevels';
+        // const url="http://localhost:3000/subLevels/";
+        const queryString=query+userData.eduLevel;
         console.log("fetching education sub levels");
         console.log(queryString)
         fetch(queryString)
@@ -77,7 +81,8 @@ const Onboarding=()=>{
 
     const getEduFields=()=>{
         console.log("fetching education fields");
-        fetch('http://localhost:3000/fields')
+        const query=url+'/fields';
+        fetch(query)
         .then(res => res.json())
         .then(data=>{
             setEduFields(data.data);
@@ -86,7 +91,7 @@ const Onboarding=()=>{
     
 
     const getEduSubFields=()=>{
-        const url="http://localhost:3000/subFields/";
+        const url=url+"/subFields/";
         const queryString=url+userData.eduField;
         console.log("fetching education sub fields");
         fetch(queryString)
@@ -97,7 +102,7 @@ const Onboarding=()=>{
     }
 
     const getInterestedCareers=()=>{
-        const url="http://localhost:3000/careers/";
+        const url=url+"/careers/";
         const queryString=url+userData.eduSubField;
         console.log("fetching careers...")
         console.log(queryString);
@@ -109,7 +114,8 @@ const Onboarding=()=>{
     }
 
     const saveData=()=>{
-        fetch('http://localhost:3000/onboarding/',{
+        const query=url+"/onboarding";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify(userData)

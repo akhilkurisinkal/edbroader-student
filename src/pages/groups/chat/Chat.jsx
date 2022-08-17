@@ -4,7 +4,7 @@ import Textbox from "../../../components/textbox/Textbox";
 import Button from "../../../components/button/Button";
 import userIcon from "../../../assets/profile.svg";
 import { useNavigate,useParams } from "react-router-dom";
-
+import url from "../../../url";
 const Chat=()=>{
     const navigate=useNavigate();
     const [chatName,setChatName]=useState("");
@@ -25,7 +25,8 @@ const Chat=()=>{
         messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
     }
     const getChats=()=>{
-            fetch('http://localhost:3000/chat',{
+        const query=url+"/chat";
+            fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken"),group:id})  
@@ -44,7 +45,8 @@ const Chat=()=>{
 
     const sendMessage=(e)=>{
         e.preventDefault();
-        fetch('http://localhost:3000/chat/sendMessage/',{
+        const query=url+"/chat/sendMessage/";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify(newMessage)  

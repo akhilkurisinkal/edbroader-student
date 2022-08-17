@@ -5,7 +5,7 @@ import { useState,useEffect } from "react";
 import { AppContext } from "../../AppContext";
 import "./Groups.css";
 import Loading from "../../components/loading/Loading";
-
+import url from "../../url";
 const Groups=()=>{
     const page=useContext(AppContext);
     const [groups,setGroups]=useState([]);
@@ -16,7 +16,8 @@ const Groups=()=>{
 
     const navigate=useNavigate();
     const getGroups=()=>{
-        fetch("http://localhost:3000/groups/userGroups/",{
+        const query=url+"/groups/userGroups/"
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken")})

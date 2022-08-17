@@ -1,8 +1,9 @@
 import './App.css';
 import {React,useContext} from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import RoutePaths from './RoutePaths';
 import { AppProvider } from './AppContext';
+import Header from "./components/header/Header";
 
 import Nav from "./components/nav/Nav";
 
@@ -12,10 +13,11 @@ function App() {
     <div className="App">
       <AppProvider>
       <div className="App">
-        <BrowserRouter>
+        <HashRouter>
+          <Header/>
           <Nav/>
           <RoutePaths/>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     </AppProvider>
     </div>

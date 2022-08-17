@@ -1,6 +1,99 @@
+nav.nav{
+    min-width: 95%;
+    height: auto;
+    margin: 0;
+    padding: 0% 0;
+    background: hsla(280, 84%, 41%, 1);
+    
+
+background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, #8611c0 0%, hsla(218, 97%, 56%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#8711C1", endColorstr="#2472FC", GradientType=1 );
+    border-radius: 25px 25px 0px 0;
+}
+nav.nav ul{
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav.nav ul li{
+    margin: 20px 0px;
+}
+nav.nav ul li button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color:transparent;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    
+}
+nav.nav ul li button.active{
+    background-color: #ffffff;
+    
+}
+
+/* button icon when active */
+nav.nav ul li button#home.active{
+    background-image: url(../../assets/nav-icons/dark/home.png);
+    
+}
+nav.nav ul li button#groups.active{
+    background-image: url(../../assets/nav-icons/dark/stream.png);
+    
+}
+nav.nav ul li button#saved.active{
+    background-image: url(../../assets/nav-icons/dark/bookmark_added.png);
+    
+}
+nav.nav ul li button#support.active{
+    background-image: url(../../assets/nav-icons/dark/support_agent.png);
+    
+}
+nav.nav ul li button#profile.active {
+    background-image: url(../../assets/nav-icons/dark/account_circle.png);
+    
+}
+
+/* button icon when inactive */
+nav.nav ul li button#home{
+    background-image: url(../../assets/nav-icons/light/home.png);
+    
+}
+nav.nav ul li button#groups{
+    background-image: url(../../assets/nav-icons/light/stream.png);
+    
+}
+nav.nav ul li button#saved{
+    background-image: url(../../assets/nav-icons/light/bookmark_added.png);
+    
+}
+nav.nav ul li button#support{
+    background-image: url(../../assets/nav-icons/light/support_agent.png);
+    
+}
+nav.nav ul li button#profile{
+    background-image: url(../../assets/nav-icons/light/account_circle.png);
+    
+}
+
+
+.hidden{
+    display: none;
+}
 @media screen and (min-width: 600px){
     nav.nav{
-        width: auto;
+        min-width: auto;
         height: auto;
         margin: 0;
         padding: 8% 0;

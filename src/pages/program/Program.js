@@ -3,7 +3,7 @@ import "./Program.css";
 import Button from "../../components/button/Button";
 import Nav from "../../components/nav/Nav";
 import { useNavigate,useParams } from "react-router-dom";
-
+import url from "../../url";
 const Program=()=>{
   
     const [programDetails,setProgramDetails]=useState([]);
@@ -21,7 +21,8 @@ const Program=()=>{
 
 
     const getProgramDetails=()=>{
-        fetch('http://localhost:3000/program/',{
+        const query=url+"/program";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken"),program:id})  
@@ -49,7 +50,8 @@ const Program=()=>{
     }
 
     const joinGroup=(event,param)=>{
-        fetch('http://localhost:3000/groups/joinGroup/',{
+        const query=url+"/groups/joinGroup/";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken"),program:param})  
@@ -68,7 +70,8 @@ const Program=()=>{
 
     const saveProgram=(event,param)=>{
         console.log("saving");
-        fetch('http://localhost:3000/save/',{
+        const query=url+"/save/";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken"),program:param})  
@@ -76,9 +79,9 @@ const Program=()=>{
         .then(res => res.json())
         .then(data=>{
             if(data.status==="exist"){
-                console.log("already saved");
+                alert("already saved");
             }else{
-                console.log("saved");
+                alert("saved");
                 
                 
             }
@@ -91,7 +94,8 @@ const Program=()=>{
     const unsaveProgram=(event,param)=>{
 
         console.log("saving");
-        fetch('http://localhost:3000/save/unsave',{
+        const query=url+"/save/unsave";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken"),program:param})  
@@ -99,9 +103,9 @@ const Program=()=>{
         .then(res => res.json())
         .then(data=>{
             if(data.status==="exist"){
-                console.log("already saved");
+                alert("already saved");
             }else{
-                console.log("unsaved");
+                alert("unsaved");
                
                 
             } 
@@ -111,7 +115,8 @@ const Program=()=>{
     }
 
     const findIsSaved=()=>{
-        fetch('http://localhost:3000/save/find/',{
+        const query=url+"/save/find/";
+        fetch(query,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({accessToken:localStorage.getItem("accessToken"),program:id})  

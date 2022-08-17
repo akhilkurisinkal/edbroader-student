@@ -65,7 +65,7 @@ const Support=()=>{
                 </div>
                 <div>
                 <div className="card head">
-                                <div><h4>Logo</h4></div>
+      
                                 <div><h4>Name</h4></div>
                                 <div><h4>City</h4></div>
                                 <div><h4>Country</h4></div>
@@ -74,7 +74,7 @@ const Support=()=>{
                     {
                         result.map(res=>(
                             <div className="card">
-                                <div>Logo</div>
+
                                 <div>{res.name}</div>
                                 <div>{res.city}</div>
                                 <div>{res.country}</div>

@@ -1,3 +1,100 @@
+
+
+    #search{
+        width: 93%;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        justify-content: flex-start;
+        
+        
+    }
+    #search .search-child{
+        border: none;
+        max-width: 98%;
+        min-width: 98%;
+        height: 20%;
+        background-color: #f5f5f5;
+        margin: 10px;
+        padding: 2%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        box-sizing: border-box;
+        border-radius: 25px;
+        background: #f5f5f5;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 24px 0px, #D6BBE3 0px 0px 0px 1px;
+    }
+
+  
+    #search .search-child div{
+        text-align: left;
+        flex-grow: 1;
+        flex-basis: 0;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:left;
+    }
+    #search .search-child .left{
+        width: 10%;
+    }
+    #search .search-child .middle{
+        width: 50%;
+        color: hsla(218, 97%, 56%, 1);
+    }
+    #search .search-child .middle h4{
+        background: -webkit-linear-gradient(hsla(280, 84%, 41%, 1), hsla(218, 97%, 56%, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+      }
+    
+
+    #search .search-child .save-btn{
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-image: url(../../../assets/icons/dark/bookmark.png);
+    }
+
+    #search .search-child .save-btn.active{
+        background-image: url(../../../assets/icons/dark/bookmarked.png);
+    }
+
+    #suggested .suggested-child .cap-icon{
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        background-position: center;
+        background-color: #f5f5f5;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-image: url(../../../assets/icons/dark/cap.png);
+    }
+    #suggested .suggested-child .time-icon{
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        margin-left: 30px;
+        background-position: center;
+        background-color: #f5f5f5;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-image: url(../../../assets/icons/dark/timer.png);
+    }
+
+
 @media screen and (min-width: 600px){
 
     #search{

@@ -10,7 +10,7 @@ import Nav from "./components/nav/Nav";
 function App() {
 
   return (
-    <div className="App">
+   
       <AppProvider>
       <div className="App">
         <HashRouter>
@@ -20,7 +20,7 @@ function App() {
         </HashRouter>
       </div>
     </AppProvider>
-    </div>
+ 
   );
 }
 

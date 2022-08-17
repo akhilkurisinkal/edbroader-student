@@ -41,8 +41,7 @@ const Home=()=>{
     const search=(e)=>{
         e.preventDefault();
         console.log("search button clicked");
-        const url=url+"/search/";
-        const searchURL=url+searchString;
+        const searchURL=url+"/search/"+searchString;
         fetch(searchURL)
         .then(res => res.json())
         .then(data=>{

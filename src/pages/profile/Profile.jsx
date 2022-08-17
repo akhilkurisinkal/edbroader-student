@@ -74,8 +74,7 @@ const Profile=()=>{
 
     const getEduSubLevels=()=>{
         const query=url+"/subLevels/";
-        const url=query;
-        const queryString=url+userData.eduLevel;
+        const queryString=query+userData.eduLevel;
         console.log("fetching education sub levels");
         console.log(queryString)
         fetch(queryString)
@@ -98,8 +97,7 @@ const Profile=()=>{
 
     const getEduSubFields=()=>{
         const query=url+"/subFields/";
-        const url=query;
-        const queryString=url+userData.eduField;
+        const queryString=query+userData.eduField;
         console.log("fetching education sub fields");
         fetch(queryString)
         .then(res => res.json())
@@ -110,8 +108,7 @@ const Profile=()=>{
 
     const getInterestedCareers=()=>{
         const query=url+"/careers/";
-        const url=query;
-        const queryString=url+userData.eduSubField;
+        const queryString=query+userData.eduSubField;
         console.log("fetching careers...")
         console.log(queryString);
         fetch(queryString)

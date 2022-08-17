@@ -11,6 +11,7 @@ import url from "../../url";
 
 const Login=()=>{
     const page=useContext(AppContext);
+    const isLogged=useContext(AppContext);
     const [errors,setErrors]=useState({
         credentialError:""
     })
@@ -37,6 +38,8 @@ const Login=()=>{
                 setErrors({...errors,credentialError:"Invalid credentials"});
             }else{
                 localStorage.setItem("accessToken",data.accessToken);
+                isLogged.setIsLogged(true);
+                console.log(isLogged.isLogged);
                 if(data.onboarded!=="yes"){
                     navigate("/onboarding");
                 }else{

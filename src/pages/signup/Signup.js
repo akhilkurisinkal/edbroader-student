@@ -1,6 +1,6 @@
 import {React,useState,useEffect,useContext} from "react";
 import Textbox from "../../components/textbox/Textbox";
-import "./Signup.css";
+// import "./Signup.css";
 import user from "../../assets/form-icons/user.svg";
 import email from "../../assets/form-icons/email.svg";
 import lock from "../../assets/form-icons/lock.svg";
